@@ -64,3 +64,24 @@ The models were evaluated using several metrics:
 - Precision, Recall, and F1-Score: Further analyzed model performance in handling class imbalance (positive and negative reviews).
 - Macro and Weighted Averages: Used to better evaluate the model across imbalanced classes.
 - The evaluation was conducted on both TF-IDF vectors and word embeddings.
+
+### Result
+
+1. Chi-Square Feature Selection:
+- After using Chi-Square for feature selection, the best number of features for the Multinomial Naive Bayes model was determined to be 430.
+- For Logistic Regression, the best number of features was 200.
+- The Gaussian Naive Bayes model showed a small increase in accuracy from 0.855 to 0.857 after feature selection.
+- The Bernoulli Naive Bayes model benefited more from feature selection, increasing from 0.867 to 0.876.
+- The Multinomial Naive Bayes model showed a slight decrease in accuracy from 0.885 to 0.880 after feature selection.
+- Logistic Regression maintained an accuracy of 0.904, both before and after feature selection.
+
+2. Mutual Information Feature Selection:
+- The best k for Mutual Information feature selection was 500.
+- The Multinomial Naive Bayes model achieved an accuracy of 0.885 using this technique, which is the same as when no feature selection was applied.
+- Logistic Regression Performance:
+- Logistic Regression with TF-IDF features, both with and without Chi-Square selection, had an accuracy of 0.904, indicating that feature selection did not significantly impact this model's performance.
+
+### Conclusion:
+Chi-Square feature selection was effective in improving or maintaining the performance of Naive Bayes models, with the Bernoulli Naive Bayes model benefiting the most from feature selection (increased to 0.876).
+Logistic Regression maintained its performance even after feature selection, achieving a stable accuracy of 0.904. Mutual Information selection resulted in no improvement for the Multinomial Naive Bayes model, keeping the accuracy at 0.885.
+
